@@ -14,4 +14,4 @@ See Warlords Redux Miller Edition for older patch notes
  - Lowered price of all helis/jets massively
  - adjusted AI teammates number
  - Rebalanced AI spawn tables to focus on anti-air
- - All zone recoded to work with Maverick
+ - All zone re-coded to work with Maverick

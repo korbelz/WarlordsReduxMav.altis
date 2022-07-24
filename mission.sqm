@@ -309,6 +309,7 @@ class Mission
 			init="this setVariable [""BIS_WL_services"", [""W"", ""A"", ""H""]];";
 			id=11;
 			type="Logic";
+			atlOffset=7.6293945e-006;
 		};
 		class Item11
 		{
@@ -975,6 +976,7 @@ class Mission
 			};
 			id=67;
 			type="EmptyDetector";
+			atlOffset=-3.8146973e-005;
 		};
 		class Item66
 		{
@@ -1069,6 +1071,7 @@ class Mission
 			};
 			id=76;
 			type="EmptyDetector";
+			atlOffset=9.5367432e-007;
 		};
 		class Item73
 		{
@@ -1438,6 +1441,7 @@ class Mission
 			};
 			id=106;
 			type="EmptyDetectorAreaR250";
+			atlOffset=3.8146973e-005;
 		};
 		class Item101
 		{
@@ -14664,7 +14668,6 @@ class Mission
 			init="this setVariable [""BIS_WL_services"", [""W"", ""A"", ""H""]];";
 			id=511;
 			type="Logic";
-			atlOffset=9.5367432e-007;
 		};
 		class Item291
 		{
