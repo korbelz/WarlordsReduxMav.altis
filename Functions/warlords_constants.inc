@@ -56,18 +56,18 @@
 #define WL_MAINTENANCE_COOLDOWN_REARM_Artillery 1800 //not in .57
 #define WL_LOSING_SECTOR_WARN_FREQ 30
 #define WL_MUSIC_VOLUME 0.1
-#define WL_GARRISON_GROUP_SIZE_MIN 4
-#define WL_GARRISON_GROUP_SIZE_MAX 5
+#define WL_GARRISON_GROUP_SIZE_MIN 2
+#define WL_GARRISON_GROUP_SIZE_MAX 4
 #define WL_ASSET_IRRELEVANT_RANGE 1000
 #define WL_TARGET_RESET_VOTING_TIME 60
 #define RD_KILL_REWARD_MOD 4444  //Original value 10,000; lower value equals higher kill rewards
-#define RD_GARRISON_SIZE_MOD 3  //Original value 2; adjust this to increase total INF spawning in an AI sector. 
+#define RD_GARRISON_SIZE_MOD 2  //Original value 2; adjust this to increase total INF spawning in an AI sector. 
 #define RD_MINECOUNT_DELETE_THRESHOLD 400 //Original value 400; Total # of mines allowed on server anymore will be delete when any sector is capped
 #define RD_UAVCOUNT_DELETE_THRESHOLD 24 //Original value 50;
 #define RD_VIC_MIN_HEIGHT -125  //default is roughly 135 AGL, -125 = roughly 10 meters. 0 = roughly 135 AGL
 #define RD_VIC_RANDOM_HEIGHT 125  //Bell curve model, 125 = avg of 75 height + Min Height value. Game deafults to roughly 135 AGL
 #define RD_VIC_RANDOM_AI_SPAWNS 4  //Random number of AI vics that can spawn in a zone 0 to <value given>; default 4
-#define RD_AIR_RANDOM_AI_SPAWNS 4  //Random number of AI Air that can spawn in a zone 0 to <value given>; default 4
+#define RD_AIR_RANDOM_AI_SPAWNS 8  //Random number of AI Air that can spawn in a zone 0 to <value given>; default 4
 #define RD_TEAM_BALANCE_SPLIT 3  //Number of player split between teams before CP cutoff; default 3
 #define RD_BASE_VALUE_ADJUSTMENT 10000  //default 10,000; Lower number equals more CP value for a sector; see also WL_SECTOR_CAPTURE_REWARD_MULTIPLIER
 
