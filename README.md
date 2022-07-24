@@ -1,8 +1,8 @@
 # WarlordsReduxMe.altis
- bare metal redux mission with performance improvements and many bug fixes.
+Warlords Maverick is 50 v 50 pilot focused warlords.
 
- # Warlords Redux Miller Edition(ME) 
-Warlords Redux bare metal with perf improvements. 
+ # Warlords Redux Maverick 
+Warlords Maverick is 50 v 50 pilot focused warlords. 
 
 Original Warlords Redux by Bohemia Interactive and Jezuro can be found here:
 https://steamcommunity.com/sharedfiles/filedetails/?id=1834482266&searchtext=Warlords+redux
