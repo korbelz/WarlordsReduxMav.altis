@@ -1,0 +1,165 @@
+1.0.0001
+ - Init commit
+ - V file updated
+ - Remove earplug script
+ - Removed View distance script
+ - Removed unflip script
+ - Removed Sling load script
+ - Removed GOM script
+ - Testing github bot
+
+ 1.0.0002
+ - updated welcome screen
+ - Removed old markers from map
+ - removed edessa as a base to stop exploding cars
+ - Fixed view distance
+ - New welcome screen
+ - No longer able to switch teams
+ - restored .57 Repair/rearm
+ - Full Requisition list
+ - Removed adjustable AI buddy count
+ - Lowered AI buddy count to 2
+ - Upped AI skill?
+ - Lowered cost of tanks 
+
+ 1.0.0003
+ - Fixed bug in garbage collector 
+ - added Helipads to Kavala
+ - Fixed mission name 
+
+ 1.0.0004
+ - Fixed Heli/jet re-arm bug
+ - Improved repair/rearm tooltip
+ - Removed onplayerrespawn script for perf 
+ - ?fix for CP transfer bug? 
+ - Changed Edessa to a circle zone and bigger for better spawning
+ - Changed Zaros to a circle zone and bigger for better spawning
+ - Vics no longer spawn on roads and clip buildings
+ - Vastly increased number of safe spawn locations per town
+ - Increase size of a few problem towns to work with new spawning system: Ghost hotel, Oreo, Aberra, Gat. 
+
+ 1.0.0005
+ - Adjusted max view distance
+ - Adjusted CP transfer cost
+ - Adjusted repair/re-arm timers for .57
+ - Moved or enlarged the following towns for better spawning: Edessa, Negades, power plant(25m), neri(25m), abdera(25m), oreo(65m), Solar(25m SW)
+    - This was done inline with the fix to spawning systems in earlier patch
+ - Fixed almost all zone naming issues
+ - Removed 2 zones for CP balance
+ - Added new sector links: kalithea -> Agios Petros, Pygros -> Faronaki
+ - Possible fix for server lock up at low FPS, should safely run scripts at 20ish FPS now.
+ - Fix for sector selection bug(sync time)
+ - Fix for Order funds transfer bug(sync time)
+ - Improved AI buddy update UI rate
+ - Fixed for change sector ownership bug(sync time)
+
+ 1.0.0006
+- Fixed divide by zero error in respawn handle script(maybe?)
+- Fixed error in the new warlords script that still allowed team switching
+- Above changes might both be related to teleport glitch...so maybe fixed?
+- Fixed bug in sector voting(sync time)
+- Fixed for minor update sector array bug
+- Added Official Arma Discord link
+- Removed UCAVs, need more testing
+
+1.0.0007
+- Slowed down and simplified zone kill code for debugging/logging
+- Edessa re-added as a base and made little smaller
+- Kavala re-added as heli and airport
+- Fix for Helis landing damaged
+
+1.0.0008
+- reduced default(min) spawn height of vic by 125 meters
+- Added 125 meters(mean) 75 meters of randomness to vic spawn height
+- Added toggles for vic spawning heights
+- Kavala Carrier clean up and improvements
+- Carriers easier to land on
+- ZoneRestriction mode from 0 to 1 for testing
+
+1.0.0009
+- CP transfer removed for testing
+
+1.0.0010
+- CP transfer restored
+- CP transfer cancel bug fixed 
+
+57.0.011
+- Renamed V file to 57.x.xxx
+- Fix for chat not working after failing to change teams
+- Fixed welcome popping up early bug
+- Improved performance of welcome screen script
+- Added bunch of documentation to GitHub page/wiki
+- Improved performance of re-arm script
+- Random mission start times, heavily weighted toward daytime
+- Defenders can now spawn anywhere in a zone, get REKT spawn campers :)
+
+57.0.012
+- Removed static AT/AA until fix for flipping is found
+- Slowed down kill zone checks to every 5 seconds for debugging
+
+57.0.013
+- Minor improvements to spawning code
+- Green zones now spawn a random number of vehicles (0 - 4), before it was 1. 
+
+57.0.014
+- Added quick toggle for number of AI vics that randomly spawn per zone
+- Removed one uncompiled script and moved welcome script to common folder
+- Added Sexy Tractors 
+- Fixed wing UCAVs working
+- Rotary Wing UCAVs working, but had to make helis spawn on ground
+- Added Xi'an to bluefor because its OP
+
+57.0.015
+- Removed MQ-12 falcon
+- Restore Heli default spawn code
+- Restored Blackfish at helipad only zones
+- added Gryphon
+- added Rhino MGS to opfor
+- added V-44 X Blackfish(Vic) to opfor
+- added F/A-181 Black Wasp II to opfor
+- added To-201 Shikra to bluefor
+- added M2A1 Slammer UP opfor
+- added T-140K Angara to bluefor
+- added AFV-4 Gorgon to both sides
+- added AWC 302 Nyx (AA) to both sides
+- Increased Killzone timer from 1 to 6 seconds to 3 to 8 seconds
+- Disabled active and passive radar sensors for fixed wing jets
+  - Datalinks still work of off board radar data
+- All Fixed wing jets had price greatly reduced to match reduced OP factor
+- Prototype anti-AFK system
+- Started documentation for team balancing system
+
+57.0.016
+- adjusted Mortar pricing
+- Tighten Friendly fire threshold to limit abuse
+- More prototype work on team balance system
+
+57.0.017
+- Added team balance system(Ukraine model)
+- Added Multiple AI aircraft spawning per zone
+- Added toogle for AI aircraft per zone 
+- Added ski jump ramps to NW Airfield
+- Added ski jump ramps to both runways at SE Airfield
+
+57.0.018
+- Fix AI vics exploding on spawn in
+- Cleaned up AI aircraft waypoint code
+- Added team numbers split range before economic sanctions start 
+- Added adjustable toggle to team balance range
+
+57.0.019
+- Improved map...no spoilers :) 
+- Added Huron slingload items
+- Added Taru Pods 
+- Added Indy UCAVs
+- Added Indy UGVs
+- Updated sector services
+- Updated mission back end to handle 50 v 50
+- Added assault divers to all teams...no reason at all :)
+- Added Info about team balance system to welcome screen
+
+57.1.020
+- Improvements to bomos sector
+- Improvements to Kavala pier sector
+- Added new sector link near salt flats
+- Added adjustment for sector value
