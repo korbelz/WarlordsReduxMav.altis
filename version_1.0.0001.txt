@@ -11,5 +11,6 @@ See Warlords Redux Miller Edition for older patch notes
  - 2x scan duration
  - more than 2x reduction in AI per zone
  - More AI jets to fight per zone :)
+ - Lowered price of all helis/jets massively
 
  
