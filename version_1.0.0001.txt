@@ -8,5 +8,6 @@ See Warlords Redux Miller Edition for older patch notes
  - Cap height updated
  - Upped capture bonus
  - 2x CP per minute 
+ - 2x scan duration
 
  
