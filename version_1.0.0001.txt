@@ -5,5 +5,7 @@ See Warlords Redux Miller Edition for older patch notes
  - V file updated
  - Updated buy list 
  - Updated welcome screen
+ - Cap height updated
+ - Upped capture bonus
 
  
