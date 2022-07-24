@@ -13,5 +13,5 @@ See Warlords Redux Miller Edition for older patch notes
  - More AI jets to fight per zone :)
  - Lowered price of all helis/jets massively
  - adjusted AI teammates number
-
+ - Rebalanced AI spawn tables to focus on anti-air
  
