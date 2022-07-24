@@ -7,5 +7,6 @@ See Warlords Redux Miller Edition for older patch notes
  - Updated welcome screen
  - Cap height updated
  - Upped capture bonus
+ - 2x CP per minute 
 
  
