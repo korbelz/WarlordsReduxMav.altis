@@ -1,0 +1,6 @@
+See Warlords Redux Miller Edition for older patch notes 
+
+1.0.0001
+ - Init commit
+ - V file updated
+ 

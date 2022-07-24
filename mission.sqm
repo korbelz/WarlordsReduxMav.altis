@@ -23,7 +23,7 @@ class EditorData
 	};
 };
 binarizationWanted=0;
-sourceName="WarlordsReduxMe";
+sourceName="WarlordsReduxMav";
 addons[]=
 {
 	"A3_Modules_F",
@@ -18658,7 +18658,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3731.5522,38.363064,12975.877};
-				angles[]={-0,0,6.2826972};
+				angles[]={0,0,6.2826972};
 			};
 			side="Empty";
 			class Attributes
