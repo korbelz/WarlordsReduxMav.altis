@@ -30,3 +30,4 @@ See Warlords Redux Miller Edition for older patch notes
 - Added back in adjustable AI buddy # system
 - Added debugging code for UAV and mine removal systems
 - Fixed a re-arm exploit...RIP Arty/mortar abuse 2022 
+- added boats
