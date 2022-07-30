@@ -1,6 +1,6 @@
 See Warlords Redux Miller Edition for older patch notes 
 
-1.0.0001
+1.0.0020
  - Init commit
  - V file updated
  - Updated buy list 
@@ -15,3 +15,5 @@ See Warlords Redux Miller Edition for older patch notes
  - adjusted AI teammates number
  - Rebalanced AI spawn tables to focus on anti-air
  - All zone re-coded to work with Maverick
+
+ 1.0.0021
