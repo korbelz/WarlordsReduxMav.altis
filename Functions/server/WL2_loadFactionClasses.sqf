@@ -95,7 +95,7 @@ BIS_WL_factionUnitClasses = [
 		"I_Soldier_exp_F",		1, //APERS, default 10
 		"I_officer_F",			1, //officer, default 10
 		"I_Spotter_F",			1, //spotter, default 10
-		"O_diver_F",			1, //spotter, default 10
+		"I_diver_F",			1, //spotter, default 10
 		"I_Sniper_F",			1 //sniper, default 10
 	]
 ];
