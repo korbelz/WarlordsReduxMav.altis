@@ -1,4 +1,8 @@
-# WarlordsReduxMe.altis
+![This is an image](https://github.com/korbelz/WarlordsReduxMe.altis/blob/main/Redux_ME_thumbnail.png)
+
+![This is an image](https://img.shields.io/github/issues/korbelz/WarlordsReduxMe.altis)  ![This is an image](https://img.shields.io/github/forks/korbelz/WarlordsReduxMe.altis)  ![This is an image](https://img.shields.io/github/stars/korbelz/WarlordsReduxMe.altis) 	![This is an image](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fkorbelz%2FWarlordsReduxMe.altis)
+
+# WarlordsReduxMav.altis
 Warlords Maverick is 50 v 50 pilot focused warlords.
 
  # Warlords Redux Maverick 
