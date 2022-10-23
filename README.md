@@ -35,6 +35,9 @@ WL2_loadfactioncclasses file is the file to adjust the AI spawn tables for enemy
 
 coming soon!
 
+Further info on the License used for Warlords: Redux projects can be found here:
+https://choosealicense.com/
+
 ## Live stream playlist 
 
 I stream all the dev work I do on redux for a detailed breakdown of all the bugs that get fixed. 
