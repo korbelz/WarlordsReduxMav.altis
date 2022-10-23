@@ -1,4 +1,9 @@
-# WarlordsReduxMe.altis
+![This is an image](https://github.com/korbelz/WarlordsReduxMav.altis/blob/main/warlords_maverick.jpg)
+
+![This is an image](	https://img.shields.io/github/issues/korbelz/WarlordsReduxMav.altis)  ![This is an image](https://img.shields.io/github/forks/korbelz/WarlordsReduxMav.altis)  ![This is an image](https://img.shields.io/github/stars/korbelz/WarlordsReduxMav.altis) 	![This is an image](	https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fkorbelz%2FWarlordsReduxMav.altis
+)
+
+# WarlordsReduxMav.altis
 Warlords Maverick is 50 v 50 pilot focused warlords.
 
  # Warlords Redux Maverick 
@@ -10,6 +15,8 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1834482266&searchtext=War
 Offical Arma 3 Website: https://arma3.com/
 
 Offical Arma 3 discord:  https://discord.gg/arma
+
+Based on Warlords Redux: Miller Edition: https://github.com/korbelz/WarlordsReduxMe.altis
 
 
 ## Want to get involed  
@@ -23,6 +30,10 @@ Requisition.inc file is the file to adjust what players can buy and the cost of 
 Warlords_constants.inc is the main adjustment file that has the mission specific settings 
 
 WL2_loadfactioncclasses file is the file to adjust the AI spawn tables for enemy towns
+
+## License info
+
+coming soon!
 
 ## Live stream playlist 
 
