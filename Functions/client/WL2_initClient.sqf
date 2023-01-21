@@ -7,51 +7,53 @@ waitUntil {!isNull player && isPlayer player};
 "client" call BIS_fnc_WL2_varsInit;
 
 
-//this whole if statement stops side switching
+//this whole if statement stops side switching. Line 11 to 56 comment out
 
-private _teamCheckOKVarID = format ["BIS_WL_teamCheckOK_%1", getPlayerUID player];
+if (KORB_DISABLE_TEAM_SWITCHING == 1) then{
+	private _teamCheckOKVarID = format ["BIS_WL_teamCheckOK_%1", getPlayerUID player];
 
-waitUntil {!isNil {missionNamespace getVariable _teamCheckOKVarID}};
+	waitUntil {!isNil {missionNamespace getVariable _teamCheckOKVarID}};
 
-if !(missionNamespace getVariable _teamCheckOKVarID) exitWith {
-	addMissionEventHandler ["EachFrame", {
-		clearRadio;
-		{
-			deleteMarkerLocal _x;
-		} forEach allMapMarkers;
-	}];
-	sleep 0.1;
-	// This section controls the "you can't switch teams" display
-	["client_init"] call BIS_fnc_endLoadingScreen;
-	player removeItem "ItemMap";
-	player removeItem "ItemRadio";
-	[player] joinSilent BIS_WL_wrongTeamGroup;
-	enableRadio FALSE;
-	enableSentences FALSE;
-	0 fadeSpeech 0;
-	0 fadeRadio 0;
-	{_x enableChannel [FALSE, FALSE]} forEach [0,1,2,3,4,5];
-	showCinemaBorder FALSE;
-	private _camera = "Camera" camCreate position player;
-	_camera camSetPos [0, 0, 10];
-	_camera camSetTarget [-1000, -1000, 10];
-	_camera camCommit 0;
-	_camera cameraEffect ["Internal", "Back"];
-	waitUntil {!isNull WL_DISPLAY_MAIN};
-	WL_DISPLAY_MAIN ctrlCreate ["RscStructuredText", 994001];
-	(WL_DISPLAY_MAIN displayCtrl 994001) ctrlSetPosition [safeZoneX, safeZoneY, safeZoneW, safeZoneH];
-	(WL_DISPLAY_MAIN displayCtrl 994001) ctrlSetBackgroundColor [0, 0, 0, 0.75];
-	(WL_DISPLAY_MAIN displayCtrl 994001) ctrlCommit 0;
-	WL_DISPLAY_MAIN ctrlCreate ["RscStructuredText", 994000];
-	(WL_DISPLAY_MAIN displayCtrl 994000) ctrlSetPosition [safeZoneX + 0.1, safeZoneY + (safeZoneH * 0.5), safeZoneW, safeZoneH];
-	(WL_DISPLAY_MAIN displayCtrl 994000) ctrlCommit 0;
-	(WL_DISPLAY_MAIN displayCtrl 994000) ctrlSetStructuredText parseText format [
-		"<t shadow = '0'><t size = '%1' color = '#ff4b4b'>%2</t><br/><t size = '%3'>%4</t></t>",
-		(2.5 call BIS_fnc_WL2_sub_purchaseMenuGetUIScale),
-		localize "STR_A3_WL_switch_teams",
-		(1.5 call BIS_fnc_WL2_sub_purchaseMenuGetUIScale),
-		localize "STR_A3_WL_switch_teams_info"
-	];
+	if !(missionNamespace getVariable _teamCheckOKVarID) exitWith {
+		addMissionEventHandler ["EachFrame", {
+			clearRadio;
+			{
+				deleteMarkerLocal _x;
+			} forEach allMapMarkers;
+		}];
+		sleep 0.1;
+		// This section controls the "you can't switch teams" display
+		["client_init"] call BIS_fnc_endLoadingScreen;
+		player removeItem "ItemMap";
+		player removeItem "ItemRadio";
+		[player] joinSilent BIS_WL_wrongTeamGroup;
+		enableRadio FALSE;
+		enableSentences FALSE;
+		0 fadeSpeech 0;
+		0 fadeRadio 0;
+		{_x enableChannel [FALSE, FALSE]} forEach [0,1,2,3,4,5];
+		showCinemaBorder FALSE;
+		private _camera = "Camera" camCreate position player;
+		_camera camSetPos [0, 0, 10];
+		_camera camSetTarget [-1000, -1000, 10];
+		_camera camCommit 0;
+		_camera cameraEffect ["Internal", "Back"];
+		waitUntil {!isNull WL_DISPLAY_MAIN};
+		WL_DISPLAY_MAIN ctrlCreate ["RscStructuredText", 994001];
+		(WL_DISPLAY_MAIN displayCtrl 994001) ctrlSetPosition [safeZoneX, safeZoneY, safeZoneW, safeZoneH];
+		(WL_DISPLAY_MAIN displayCtrl 994001) ctrlSetBackgroundColor [0, 0, 0, 0.75];
+		(WL_DISPLAY_MAIN displayCtrl 994001) ctrlCommit 0;
+		WL_DISPLAY_MAIN ctrlCreate ["RscStructuredText", 994000];
+		(WL_DISPLAY_MAIN displayCtrl 994000) ctrlSetPosition [safeZoneX + 0.1, safeZoneY + (safeZoneH * 0.5), safeZoneW, safeZoneH];
+		(WL_DISPLAY_MAIN displayCtrl 994000) ctrlCommit 0;
+		(WL_DISPLAY_MAIN displayCtrl 994000) ctrlSetStructuredText parseText format [
+			"<t shadow = '0'><t size = '%1' color = '#ff4b4b'>%2</t><br/><t size = '%3'>%4</t></t>",
+			(2.5 call BIS_fnc_WL2_sub_purchaseMenuGetUIScale),
+			localize "STR_A3_WL_switch_teams",
+			(1.5 call BIS_fnc_WL2_sub_purchaseMenuGetUIScale),
+			localize "STR_A3_WL_switch_teams_info"
+		];
+	};
 };
 
 [] spawn {
@@ -135,7 +137,7 @@ _mrkrTargetFriendly setMarkerColorLocal BIS_WL_colorMarkerFriendly;
 
 BIS_WL_enemiesCheckTrigger = createTrigger ["EmptyDetector", position player, FALSE];
 BIS_WL_enemiesCheckTrigger attachTo [player, [0, 0, 0]];
-BIS_WL_enemiesCheckTrigger setTriggerArea [200, 200, 0, FALSE];
+BIS_WL_enemiesCheckTrigger setTriggerArea [200, 200, 0, FALSE, WL_MAX_SEIZING_HEIGHT];
 BIS_WL_enemiesCheckTrigger setTriggerActivation ["ANY", "PRESENT", TRUE];
 BIS_WL_enemiesCheckTrigger setTriggerStatements [
 	"{(side group _x) getFriend BIS_WL_playerSide == 0} count thislist > 0",
@@ -146,6 +148,15 @@ player addEventHandler ["GetInMan", {detach BIS_WL_enemiesCheckTrigger; BIS_WL_e
 player addEventHandler ["GetOutMan", {detach BIS_WL_enemiesCheckTrigger; BIS_WL_enemiesCheckTrigger attachTo [player, [0, 0, 0]]}];
 
 player addEventHandler ["Fired", BIS_fnc_WL2_sub_restrictMines];
+
+//UAV terminal code by MrThomasM
+player addEventHandler ["Killed", {
+	_connectedUAV = getConnectedUAV player;
+	if (_connectedUAV != objNull) exitWith {
+		player connectTerminalToUAV objNull;
+	};
+}];
+
 player addEventHandler ["Killed", {
 	BIS_WL_loadoutApplied = FALSE;
 	["RequestMenu_close"] call BIS_fnc_WL2_setupUI;
@@ -202,7 +213,7 @@ call BIS_fnc_WL2_targetResetHandle;
 player call BIS_fnc_WL2_sub_assetAssemblyHandle;
 "init" spawn BIS_fnc_WL2_hintHandle;
 [] spawn BIS_fnc_WL2_music;
-[] spawn BIS_fnc_WL2_welcome;
+
 
 (format ["BIS_WL_%1_friendlyKillPenaltyEnd", getPlayerUID player]) addPublicVariableEventHandler BIS_fnc_WL2_friendlyFireHandleClient;
 
@@ -224,6 +235,7 @@ waitUntil {WL_PLAYER_FUNDS != -1};
 	_t = WL_SYNCED_TIME + 10;
 	waitUntil {sleep WL_TIMEOUT_STANDARD; WL_SYNCED_TIME > _t && !isNull WL_TARGET_FRIENDLY};
 	sleep 5;
+	[] spawn BIS_fnc_WL2_welcome;
 	while {!BIS_WL_purchaseMenuDiscovered} do {
 		[format [toUpper localize "STR_A3_WL_tip_menu", (actionKeysNamesArray "Gear") # 0], 5] spawn BIS_fnc_WL2_smoothText;
 		sleep 30;

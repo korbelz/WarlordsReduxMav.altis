@@ -31,3 +31,7 @@ See Warlords Redux Miller Edition for older patch notes
 - Added debugging code for UAV and mine removal systems
 - Fixed a re-arm exploit...RIP Arty/mortar abuse 2022 
 - added boats
+
+1.0.0022
+- re-synced files with Miller edition
+  - this includes all bug fixes and new tech from last 6 months(see miller edition patch notes)

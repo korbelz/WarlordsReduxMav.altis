@@ -9,6 +9,8 @@ private _tiers = [];
 private _checkedAgainst = [];
 private _distance = 0;
 private _sectorsToCheckNext = (synchronizedObjects (missionNamespace getVariable _firstBase)) select {_x in BIS_WL_allSectors};
+
+
 while {count _sectorsToCheckNext > 0} do {
 	private _sectorsToCheckNow = _sectorsToCheckNext;
 	_sectorsToCheckNext = [];
@@ -30,7 +32,7 @@ while {count _sectorsToCheckNext > 0} do {
 };
 //Use _tolerance value in combo with baseDistanceMin to add randomness to base distances
 _potentialBases = [];
-_tolerance = 8;
+_tolerance = 0;
 while {count _potentialBases == 0} do {
 	_potentialBases = _tiers select {(_x # 0) >= (BIS_WL_baseDistanceMin - _tolerance) && (_x # 0) <= BIS_WL_baseDistanceMax};
 	_tolerance = _tolerance + 1;
@@ -142,7 +144,7 @@ while {_sectorsToGiveSide1 > 0 || _sectorsToGiveSide2 > 0} do {
 	if (_sector in WL_BASES) then {
 		_sector setVariable ["BIS_WL_value", BIS_WL_baseValue];
 	} else {
-		_sector setVariable ["BIS_WL_value", round (_size / RD_BASE_VALUE_ADJUSTMENT)];
+		_sector setVariable ["BIS_WL_value", round (_size / KORB_BASE_VALUE_ADJUSTMENT)];
 	};
 	
 	{

@@ -23,7 +23,7 @@ _processTargetPos = {
 	private _targetPosFinal = [];
 	
 	if !(surfaceIsWater _targetPos) then {
-		_nearSectorArr = _targetPos nearObjects ["Logic", 20];
+		_nearSectorArr = _targetPos nearObjects ["Logic", 10]; 
 		
 		if (count _nearSectorArr == 0) then {
 			_targetPosFinalArr = [_sender, nil, FALSE, _sender] call BIS_fnc_WL2_findSpawnPositions;
@@ -38,7 +38,7 @@ _processTargetPos = {
 	if (count _targetPosFinalArr > 0) then {
 		_targetPosFinal = selectRandom _targetPosFinalArr;
 	} else {
-		_targetPosFinal = [_targetPos, random 20, random 100] call BIS_fnc_relPos;
+		_targetPosFinal = [_targetPos, random 10, random 100] call BIS_fnc_relPos;
 	};
 	
 	[_targetPosFinal, _targetPosFinalArr]
@@ -109,45 +109,86 @@ if !(isNull _sender) then {
 								_spawnPos = _pos;
 							}
 						};
+						//"Air spawn code running" remoteExec ["systemChat"];
 						if (count _spawnPos == 0) then {
 							_spawnPos = _targetPosFinal;
 						};
 						_asset = createVehicle [_className, _spawnPos, [], 0, "CAN_COLLIDE"];
 						_asset setDir _dir;
-						if (RD_AIR_RADAR_ACTIVE == 1) then {
+						if (KORB_AIR_RADAR_ACTIVE == 1) then {
 							_asset enableVehicleSensor ["ActiveRadarSensorComponent", false];
 							_asset enableVehicleSensor ["PassiveRadarSensorComponent", false];
 						};
-						if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1) then {
+						if (KORB_JET_IR_ACTIVE == 1) then {
+							_asset disableTIEquipment true;
+						}; 
+
+						if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == WEST) then {
 							createVehicleCrew _asset;
+							
+							//"Bluefor air crew spawn code running" remoteExec ["systemChat"];
+						};
+						if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == EAST) then {
+							createVehicleCrew _asset;
+							_assetUavGrp = createGroup EAST;
+							[driver _asset, gunner _asset] joinSilent _assetUavGrp;
+																	
+							//"OPFOR air crew spawn code running" remoteExec ["systemChat"];
 						};
 					} else {
 						_asset = createVehicle [_className, _targetPosFinal, [], 0, "FLY"]; //heli spawn code, need anti-building check added. WARNING! messing with this code block breaks fast travel...I have no damn clue why.
 						_asset setVelocity [0, 0, 0];
 						[_asset, _sender] call BIS_fnc_WL2_sub_assetLanding;
-						/*if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1) then {
+						if (KORB_HELI_IR_ACTIVE == 1) then {
+							_asset disableTIEquipment true;
+						};
+						if (KORB_HELI_RADAR_ACTIVE == 1) then {
+							_asset enableVehicleSensor ["ActiveRadarSensorComponent", false];
+							_asset enableVehicleSensor ["PassiveRadarSensorComponent", false];
+						};
+						if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == WEST) then {
 							createVehicleCrew _asset;
-						};*/
+							"You must unlock UAV via the I menu to fly it" remoteExec ["systemChat"];
+							//"Blufor heli crew spawn code running" remoteExec ["systemChat"];
+						};
+						if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == EAST) then {
+								createVehicleCrew _asset;
+								_assetUavGrp = createGroup EAST;
+								[driver _asset, gunner _asset] joinSilent _assetUavGrp;
+								"You must unlock UAV via the I menu to fly it" remoteExec ["systemChat"];			
+								//"OPFOR heli crew spawn code running" remoteExec ["systemChat"];
+						};
 						//_text = format ["thing I spawned is: %1 and bought by: %2", _asset, _sender];
 						//[_text] remoteExec ["systemChat"];
 						//"Heli spawn code running" remoteExec ["systemChat"];
 					};
 				} else {
 					if (_isStatic) then {
-						_asset = createVehicle [_className, _targetPos, [], 0, "CAN_COLLIDE"];
+						_asset = createVehicle [_className, _targetPosFinal, [], 0, "NONE"];
 						_targetPos set [2, (_targetPos # 2) max 0];
 						_asset setDir direction _sender;
-						_asset setPos _targetPos;
+						_asset setPos _targetPosFinal;
 						if (_disable) then {
 							_asset enableSimulationGlobal FALSE;
 							_asset hideObjectGlobal TRUE;
 						} else {
-							if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1) then {
+							if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == WEST) then {
 								createVehicleCrew _asset;
 								(effectiveCommander _asset) setSkill 1;
 								(group effectiveCommander _asset) deleteGroupWhenEmpty TRUE;
+								//"Blufor static crew spawn code running" remoteExec ["systemChat"];
+							};
+							if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == EAST) then {
+								createVehicleCrew _asset;
+								_assetUavGrp = createGroup EAST;
+								[driver _asset, gunner _asset] joinSilent _assetUavGrp;
+										
+								(effectiveCommander _asset) setSkill 1;
+								(group effectiveCommander _asset) deleteGroupWhenEmpty TRUE;
+								//"OPFOR static crew spawn code running" remoteExec ["systemChat"];
 							};
 						};
+						//"isStatic spawn code running" remoteExec ["systemChat"];
 					};
 				};
 			};
@@ -211,7 +252,7 @@ if !(isNull _sender) then {
 					}; 
 				} else {
 							
-					_parachute setPos ((position _parachute) vectorAdd [0, 0, RD_VIC_MIN_HEIGHT + random RD_VIC_RANDOM_HEIGHT]);
+					_parachute setPos ((position _parachute) vectorAdd [0, 0, KORB_VIC_MIN_HEIGHT + random KORB_VIC_RANDOM_HEIGHT]);
 					_asset = createVehicle [_className, _targetPosFinal, [], 0, "NONE"];
 					_asset setVariable ["BIS_WL_deployPos", _targetPosFinal];
 					_bBox = boundingBoxReal _asset;
@@ -221,7 +262,26 @@ if !(isNull _sender) then {
 					_assetDummy setPos _targetPosFinal;
 					_assetDummy hideObject TRUE;
 					_assetDummy enableSimulation TRUE;
-					
+					if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == WEST) then {
+								createVehicleCrew _asset;
+								(effectiveCommander _asset) setSkill 1;
+								(group effectiveCommander _asset) deleteGroupWhenEmpty TRUE;
+								//"Blufor static crew spawn code running" remoteExec ["systemChat"];
+							};
+							if (getNumber (configFile >> "CfgVehicles" >> _className >> "isUav") == 1 && side _sender == EAST) then {
+								createVehicleCrew _asset;
+								_assetUavGrp = createGroup EAST;
+								[driver _asset, gunner _asset] joinSilent _assetUavGrp;
+										
+								(effectiveCommander _asset) setSkill 1;
+								(group effectiveCommander _asset) deleteGroupWhenEmpty TRUE;
+								//"OPFOR static crew spawn code running" remoteExec ["systemChat"];
+							};
+					if (KORB_TANK_IR_ACTIVE == 1) then {
+						_asset disableTIEquipment true;
+					};
+					//"Vic spawn code running" remoteExec ["systemChat"];
+
 					[_parachute, _asset, _assetDummy] spawn {
 						params ["_parachute", "_asset", "_assetDummy"];
 						
@@ -241,6 +301,11 @@ if !(isNull _sender) then {
 							_itemConfig = configFile >> "CfgVehicles" >> typeOf _asset;
 							_dropSoundClassArr = getArray (_itemConfig >> "soundBuildingCrash");
 							_dropSoundArr = [];
+							// this code block waits for the vic to 'land' then repair and refuels it.
+							sleep 2;
+							_asset setDamage 0;
+							_asset setFuel 1;
+							//"vic repair code running" remoteExec ["systemChat"];
 							
 							{
 								if (_forEachIndex % 2 == 0) then {
@@ -266,6 +331,7 @@ if !(isNull _sender) then {
 				_assets pushBack _asset;
 				
 				[_asset, _sender] spawn _setGroupOwner;
+				
 				
 			} forEach _classNames;
 			
