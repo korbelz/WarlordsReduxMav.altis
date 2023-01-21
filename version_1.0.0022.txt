@@ -37,4 +37,5 @@ See Warlords Redux Miller Edition for older patch notes
   - this includes all bug fixes and new tech from last 6 months(see miller edition patch notes)
 - Updated map to most recent version. examples: Every sector is an airfield/heliport, selokano and ammolofi airfields fixed.
 - Settings updated few examples: 50% less Inf, 100% more aircraft, cap height 2000, zone restriction height 10, etc
-- updated order lists: helis/aircraft only cost 150 to 1000 CP
+- updated requisition lists: helis/aircraft only cost 150 to 1000 CP
+- rebalance AI spawning examaple: less AA inf, more LMGs for tracers, sound effects. 

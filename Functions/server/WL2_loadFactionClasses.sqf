@@ -26,7 +26,7 @@ BIS_WL_factionUnitClasses = [
 	[
 		"B_Soldier_F",			5, //rifleman, default 100
 		"B_Soldier_GL_F",		60, //Grenadir, default 80
-		"B_soldier_AR_F",		40, //Autorifleman, default 70
+		"B_soldier_AR_F",		45, //Autorifleman, default 70
 		"B_soldier_AAR_F",		15, //Asst Autorifleman, default 70
 		"B_Soldier_TL_F",		5, //Team leader. default 30
 		"B_soldier_M_F",		30, //Marksman, default 20
@@ -36,13 +36,13 @@ BIS_WL_factionUnitClasses = [
 		"B_Soldier_SL_F",		15, //Squad leader, default 15
 		"B_medic_F",			15, //Medic, default 15
 		"B_soldier_repair_F",	5, //Repair, default 15
-		"B_soldier_AT_F",		45, //Titan AT, default 15
-		"B_soldier_AA_F",		45, //Titan AA, default 15
+		"B_soldier_AT_F",		15, //Titan AT, default 15
+		"B_soldier_AA_F",		15, //Titan AA, default 15
 		"B_engineer_F",			5, //engineer, default 15
 		"B_soldier_AAT_F",		5, //Asst AT, default 15
 		"B_soldier_AAA_F",		5, //Asst AA, default 15
 		"B_Sharpshooter_F",		15, //762x51, default 15
-		"B_HeavyGunner_F",		15, //338, default 15
+		"B_HeavyGunner_F",		35, //338, default 15
 		"B_soldier_exp_F",		5, //APERS, default 10
 		"B_officer_F",			5, //officer, default 10
 		"B_spotter_F",			5, //spotter, default 10
@@ -52,7 +52,7 @@ BIS_WL_factionUnitClasses = [
 	[
 		"O_Soldier_F",			5, //rifleman, default 100
 		"O_Soldier_GL_F",		60, //Grenadir, default 80
-		"O_Soldier_AR_F",		40, //Autorifleman, default 70
+		"O_Soldier_AR_F",		45, //Autorifleman, default 70
 		"O_Soldier_AAR_F",		15, //Asst Autorifleman, default 70
 		"O_Soldier_TL_F",		5, //Team leader. default 30
 		"O_officer_F",			5, //officer, default 10
@@ -63,9 +63,9 @@ BIS_WL_factionUnitClasses = [
 		"O_Soldier_AAT_F",		5, //Asst AT, default 15
 		"O_Soldier_AAA_F",		5, //Asst AA, default 15
 		"O_Sharpshooter_F",		15, //93x64, default 15
-		"O_HeavyGunner_F",		15, //93x64, default 15
-		"O_Soldier_AT_F",		45, //Titan AT, default 15
-		"O_Soldier_AA_F",		45, //Titan AA, default 15
+		"O_HeavyGunner_F",		35, //93x64, default 15
+		"O_Soldier_AT_F",		15, //Titan AT, default 15
+		"O_Soldier_AA_F",		15, //Titan AA, default 15
 		"O_engineer_F",			5, //engineer, default 15
 		"O_medic_F",			15, //Medic, default 15
 		"O_soldier_repair_F",	5, //Repair, default 15
@@ -77,7 +77,7 @@ BIS_WL_factionUnitClasses = [
 	[
 		"I_soldier_F",			5, //rifleman, default 100
 		"I_Soldier_GL_F",		60, //Grenadir, default 80
-		"I_Soldier_AR_F",		40, //Autorifleman, default 70
+		"I_Soldier_AR_F",		45, //Autorifleman, default 70
 		"I_Soldier_AAR_F",		5, //Asst Autorifleman, default 70
 		"I_Soldier_TL_F",		5, //Team leader. default 30
 		"I_Soldier_A_F",		5, //Ammo, default 20
@@ -87,8 +87,8 @@ BIS_WL_factionUnitClasses = [
 		"I_Soldier_SL_F",		15, //Squad leader, default 15
 		"I_Soldier_AAT_F",		5, //Asst AT, default 15
 		"I_Soldier_AAA_F",		5, //Asst AA, default 15
-		"I_Soldier_AT_F",		45, //Titan AT, default 15
-		"I_Soldier_AA_F",		45, //Titan AA, default 15
+		"I_Soldier_AT_F",		15, //Titan AT, default 15
+		"I_Soldier_AA_F",		15, //Titan AA, default 15
 		"I_medic_F",			20, //Medic, default 15
 		"I_Soldier_repair_F",	5, //Repair, default 15
 		"I_engineer_F",			5, //engineer, default 15
@@ -111,7 +111,7 @@ BIS_WL_factionVehicleClasses = [
 		"B_LSV_01_AT_F",			25, //Prowler AT, Default 75
 		"B_MRAP_01_hmg_F",			51, //Hunter hmg, default 100
 		"B_MRAP_01_gmg_F",			51, //Hunter GMG, default 100
-		"B_APC_Tracked_01_AA_F",		51, //Cheetah, default 50
+		"B_APC_Tracked_01_AA_F",		15, //Cheetah, default 50
 		"B_MBT_01_cannon_F",			25, //Slammer, default 25
 		"B_MBT_01_TUSK_F",			25, //slammer up, default 25
 		"B_UGV_01_rcws_F",			20 //UGAV rcws, default 25
@@ -127,15 +127,15 @@ BIS_WL_factionVehicleClasses = [
 		"O_APC_Tracked_02_cannon_F",		50, //Kamysh 30mm, default 50
 		"O_MBT_04_cannon_F",			10, //T-140, default 15
 		"O_MBT_04_command_F",			10, //T-140, default 15
-		"O_APC_Tracked_02_AA_F",		51, //Tigris, default 50
+		"O_APC_Tracked_02_AA_F",		15, //Tigris, default 50
 		"O_UGV_01_rcws_F",			20 //UGAV rcws, default 25
 	],
 	[
 		
-		"I_LT_01_AA_F",				100, //Nyx AA, default 50
+		"I_LT_01_AA_F",				15, //Nyx AA, default 50
 		"I_APC_Wheeled_03_cannon_F",		60, //Gorgan, default 50
 		"I_APC_tracked_03_cannon_F",		25, //Mora, default 50
-		"I_LT_01_AT_F",				80, //Nyx AT, default 50
+		"I_LT_01_AT_F",				50, //Nyx AT, default 50
 		"I_LT_01_cannon_F",			25, //Nyx 20mm, default 50
 		"I_MRAP_03_gmg_F",			25, //strider GMG, default 100
 		"I_MRAP_03_hmg_F",			25, //strider HMG, default 100
