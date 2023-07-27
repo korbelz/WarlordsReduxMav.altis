@@ -39,3 +39,6 @@ See Warlords Redux Miller Edition for older patch notes
 - Settings updated. examples: more than 50% less Inf, 100% more aircraft, cap height 2000, zone restriction height 10, etc
 - updated requisition lists: helis/aircraft only cost 150 to 1000 CP
 - rebalanced AI spawning. example: less AA inf, more LMGs, etc. 
+
+1.0.0023
+- Welcome screen prep
