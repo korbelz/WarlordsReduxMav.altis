@@ -34,14 +34,13 @@ addons[]=
 	"A3_Structures_F_Naval_Piers",
 	"A3_Boat_F_EPC_Submarine_01",
 	"A3_Structures_F_Training",
-	"A3_Boat_F_Destroyer_Destroyer_01",
-	"A3_Ui_F"
+	"A3_Boat_F_Destroyer_Destroyer_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=9;
+		items=8;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -98,13 +97,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
-		{
-			className="A3_Ui_F";
-			name="Arma 3 - User Interface";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
 	};
 };
 class DynamicSimulation
@@ -148,7 +140,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=458;
+		items=456;
 		class Item0
 		{
 			dataType="Logic";
@@ -12392,30 +12384,6 @@ class Mission
 			id=945;
 			type="Land_HelipadEmpty_F";
 			atlOffset=7.5340271e-005;
-		};
-		class Item456
-		{
-			dataType="Marker";
-			position[]={14003.739,41.963017,14721.877};
-			name="discord";
-			text="https://discord.gg/DQjYRMvv";
-			type="mil_box";
-			colorName="ColorOrange";
-			alpha=0.30308321;
-			id=946;
-			atlOffset=92.747665;
-		};
-		class Item457
-		{
-			dataType="Marker";
-			position[]={14007.282,8.1540003,14076.862};
-			name="github";
-			text="https://github.com/korbelz/WarlordsReduxMav.altis";
-			type="mil_triangle";
-			colorName="ColorOrange";
-			alpha=0.30476618;
-			id=947;
-			atlOffset=64.532997;
 		};
 	};
 	class Connections
