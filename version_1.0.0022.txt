@@ -42,3 +42,4 @@ See Warlords Redux Miller Edition for older patch notes
 
 1.0.0023
 - Welcome screen prep
+- 
