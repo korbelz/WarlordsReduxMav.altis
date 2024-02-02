@@ -140,7 +140,7 @@ switch (_serverdiscord) do
 _markertwo = createMarker ["markertwo", _markertwoloc]; // Not visible yet.
 _markertwo setMarkerType "mil_box"; // Visible.
 _markertwo setMarkerColor "ColorOrange";
-_markertwo setMarkerAlpha 0.30;
+_markertwo setMarkerAlpha 0.50;
 _markertwo setMarkerText _serverdiscord; 
 
 _buglink = missionName; 
@@ -171,5 +171,5 @@ switch (_buglink) do
 _markerthree = createMarker ["markerthree", _markerthreeloc]; // Not visible yet.
 _markerthree  setMarkerType "mil_triangle"; // Visible.
 _markerthree  setMarkerColor "ColorOrange";
-_markerthree  setMarkerAlpha 0.30;
+_markerthree  setMarkerAlpha 0.50;
 _markerthree  setMarkerText _buglink; 

@@ -44,3 +44,6 @@ See Warlords Redux Miller Edition for older patch notes
 - Welcome screen prep
 - Dynamic map markers 
 - MOTD and better logging
+
+1.0.1
+- Updated Dynamic map markers
