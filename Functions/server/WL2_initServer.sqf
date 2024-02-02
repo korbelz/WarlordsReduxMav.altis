@@ -120,7 +120,7 @@ switch (_worldname) do
 _markerone = createMarker ["markerone", _markeroneloc]; // Not visible yet.
 _markerone setMarkerType "mil_marker"; // Visible.
 _markerone setMarkerColor "ColorOrange";
-_markerone setMarkerAlpha 0.30;
+_markerone setMarkerAlpha 0.50;
 _markerone setMarkerText missionName; 
 
 //add server discord to this list to have it auto populate
