@@ -52,3 +52,4 @@ See Warlords Redux Miller Edition for older patch notes
 - Respawn time reduced by 50%
 - Updated Welcome screen
 - Reduced cost of Helis and Jets by 50%, Ex: Shirka now costed 350 cp. 
+- Fixed wing aircraft now spawn in the air with player as pilot. 

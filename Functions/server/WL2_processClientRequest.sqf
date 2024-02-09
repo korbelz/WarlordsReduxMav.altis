@@ -96,14 +96,14 @@ if !(isNull _sender) then {
 						private _taxiNodes = _sector getVariable "BIS_WL_runwaySpawnPosArr";
 						private _taxiNodesCnt = count _taxiNodes;
 						private _spawnPos = [];
-						private _dir = 0;
+						//private _dir = getDir _sender;
 						private _checks = 0;
 						while {count _spawnPos == 0 && _checks < 100} do {
 							_checks = _checks + 1;
 							private _i = (floor random _taxiNodesCnt) max 1;
 							private _pointB = _taxiNodes # _i;
 							private _pointA = _taxiNodes # (_i - 1);
-							_dir = _pointA getDir _pointB;
+							//_dir = _pointA getDir _pointB;
 							private _pos = [_pointA, random (_pointA distance2D _pointB), _dir] call BIS_fnc_relPos;
 							if (count (_pos nearObjects ["AllVehicles", 20]) == 0) then {
 								_spawnPos = _pos;
@@ -113,8 +113,11 @@ if !(isNull _sender) then {
 						if (count _spawnPos == 0) then {
 							_spawnPos = _targetPosFinal;
 						};
-						_asset = createVehicle [_className, _spawnPos, [], 0, "CAN_COLLIDE"];
-						_asset setDir _dir;
+						_asset = createVehicle [_className, ((position _sender) vectorAdd [0,400,200]), [], 0, "FLY"];
+						//_asset setDir _dir;
+						_sender moveInDriver _asset;
+						//_asset = createVehicle [_className, _spawnPos, [], 0, "CAN_COLLIDE"];
+						
 						if (KORB_AIR_RADAR_ACTIVE == 1) then {
 							_asset enableVehicleSensor ["ActiveRadarSensorComponent", false];
 							_asset enableVehicleSensor ["PassiveRadarSensorComponent", false];
