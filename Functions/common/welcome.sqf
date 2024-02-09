@@ -73,7 +73,7 @@ private _linefive = "Welcome to the fight, hold I to load the Warlords MENU";
 
 
 //orginal use was hintC _structuredText
-"Welcome to Warlords Redux .57! Please read below..." hintC [_lineone, _linethree, _linefour, _linefive, _linetwo]; 
+"Welcome to Warlords Maverick! Please read below..." hintC [_lineone, _linefour, _linefive, _linetwo]; 
 hintC_arr_EH = findDisplay 72 displayAddEventHandler ["unload", {
 	_this spawn {
 		_this select 0 displayRemoveEventHandler ["unload", hintC_arr_EH];
