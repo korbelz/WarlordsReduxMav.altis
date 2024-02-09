@@ -5159,6 +5159,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				init="isCarrier = false;";
 				disableSimulation=1;
 			};
 			id=413;
