@@ -7,7 +7,7 @@ dev = "Jezuro + Korbelz";
 author = "Jezuro + Korbelz";
 
 respawn = 3;
-respawnDelay = 20;
+respawnDelay = 10;
 respawnOnStart = -1;
 
 disabledAI = 1;

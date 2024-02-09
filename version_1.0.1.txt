@@ -49,3 +49,4 @@ See Warlords Redux Miller Edition for older patch notes
 - Updated Dynamic map markers
 - Added more loggings for admins
 - Reduced fast travel cost by 50%
+- Respawn time reduced by 50%
