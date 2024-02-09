@@ -80,25 +80,25 @@ class CfgWLRequisitionPresets
 			};
 			class Aircraft
 			{
-				class B_Heli_Light_01_F						{cost = 150;	requirements[]={"H"};	};	// "MH-9 Hummingbird"
-				class B_Heli_Light_01_dynamicLoadout_F		{cost = 200;	requirements[]={"H"};	};	// "AH-9 Pawnee"
-				class B_Heli_Transport_01_F					{cost = 250;	requirements[]={"H"};	};	// "UH-80 Ghost Hawk"
-				class B_Heli_Transport_03_F					{cost = 250;	requirements[]={"H"};	};	// "CH-67 Huron"
-				class B_Heli_Attack_01_dynamicLoadout_F		{cost = 250;	requirements[]={"H"};	};	// "AH-99 Blackfoot"
-				class B_T_VTOL_01_infantry_F				{cost = 250;	requirements[]={"H"};	};	// "V-44 X Blackfish(Inf)";
-				class B_T_VTOL_01_vehicle_F					{cost = 250;	requirements[]={"H"};	};	// "V-44 X Blackfish(Vic)";
-				class B_T_VTOL_01_armed_F					{cost = 450;	requirements[]={"H"};	};	// "V-44 X Blackfish (Armed)"
-				class B_Plane_CAS_01_dynamicLoadout_F		{cost = 650;	requirements[]={"A"};	};	// "A-164 Wipeout (CAS)"
-				class B_Plane_Fighter_01_F					{cost = 750;	requirements[]={"A"};	};	// "F/A-181 Black Wasp II";
-				class B_Plane_Fighter_01_Stealth_F			{cost = 750;	requirements[]={"A"};	};	// "F/A-181 Black Wasp II Stealth";
-				class O_Plane_Fighter_02_F					{cost = 750;	requirements[]={"A"};	};	// "To-201 Shikra"
-				class O_T_VTOL_02_infantry_dynamicLoadout_F	{cost = 750;	requirements[]={"H"};	};	// "Y-32 Xi'an (Infantry Transport)"
-				class I_Plane_Fighter_04_F					{cost = 750;	requirements[]={"A"};	};	// "A-149 Gryphon";
-				class I_C_Plane_Civil_01_F					{cost = 150;	requirements[]={"A"};	};	// "Caesar BTT";
-				class B_T_UAV_03_F							{cost = 1000;	requirements[]={"H"}; offset[]={0, 6, 0};};	// "Firescout";
-				class B_UAV_02_F							{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "greyhawk AT";
-				class B_UAV_02_CAS_F						{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "greyhawk LGB";
-				class B_UAV_05_F							{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "UCAV";
+				class B_Heli_Light_01_F						{cost = 75;	requirements[]={"H"};	};	// "MH-9 Hummingbird"
+				class B_Heli_Light_01_dynamicLoadout_F		{cost = 100;	requirements[]={"H"};	};	// "AH-9 Pawnee"
+				class B_Heli_Transport_01_F					{cost = 125;	requirements[]={"H"};	};	// "UH-80 Ghost Hawk"
+				class B_Heli_Transport_03_F					{cost = 125;	requirements[]={"H"};	};	// "CH-67 Huron"
+				class B_Heli_Attack_01_dynamicLoadout_F		{cost = 125;	requirements[]={"H"};	};	// "AH-99 Blackfoot"
+				class B_T_VTOL_01_infantry_F				{cost = 125;	requirements[]={"H"};	};	// "V-44 X Blackfish(Inf)";
+				class B_T_VTOL_01_vehicle_F					{cost = 125;	requirements[]={"H"};	};	// "V-44 X Blackfish(Vic)";
+				class B_T_VTOL_01_armed_F					{cost = 225;	requirements[]={"H"};	};	// "V-44 X Blackfish (Armed)"
+				class B_Plane_CAS_01_dynamicLoadout_F		{cost = 300;	requirements[]={"A"};	};	// "A-164 Wipeout (CAS)"
+				class B_Plane_Fighter_01_F					{cost = 350;	requirements[]={"A"};	};	// "F/A-181 Black Wasp II";
+				class B_Plane_Fighter_01_Stealth_F			{cost = 350;	requirements[]={"A"};	};	// "F/A-181 Black Wasp II Stealth";
+				class O_Plane_Fighter_02_F					{cost = 350;	requirements[]={"A"};	};	// "To-201 Shikra"
+				class O_T_VTOL_02_infantry_dynamicLoadout_F	{cost = 350;	requirements[]={"H"};	};	// "Y-32 Xi'an (Infantry Transport)"
+				class I_Plane_Fighter_04_F					{cost = 350;	requirements[]={"A"};	};	// "A-149 Gryphon";
+				class I_C_Plane_Civil_01_F					{cost = 75;	requirements[]={"A"};	};	// "Caesar BTT";
+				class B_T_UAV_03_F							{cost = 500;	requirements[]={"H"}; offset[]={0, 6, 0};};	// "Firescout";
+				class B_UAV_02_F							{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "greyhawk AT";
+				class B_UAV_02_CAS_F						{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "greyhawk LGB";
+				class B_UAV_05_F							{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "UCAV";
 				 
 				
 			};
@@ -226,26 +226,26 @@ class CfgWLRequisitionPresets
 			};
 			class Aircraft
 			{
-				class O_Heli_Light_02_unarmed_F				{cost = 150;	requirements[]={"H"};	};	// "PO-30 Orca (Unarmed)"
-				class O_Heli_Light_02_dynamicLoadout_F		{cost = 200;	requirements[]={"H"};	};	// "PO-30 Orca"
-				class O_Heli_Transport_04_F					{cost = 150;	requirements[]={"H"};	};	// "Mi-290 Taru"
-				class O_Heli_Transport_04_covered_F			{cost = 150;	requirements[]={"H"};	};	// "Mi-290 Taru (Transport)"
-				class O_Heli_Transport_04_medevac_F			{cost = 150;	requirements[]={"H"};	};	// "Mi-290 Taru (Medical)"
-				class O_Heli_Attack_02_dynamicLoadout_F		{cost = 250;	requirements[]={"H"};	};	// "Mi-48 Kajman"
-				class O_T_VTOL_02_infantry_dynamicLoadout_F	{cost = 750;	requirements[]={"H"};	};	// "Y-32 Xi'an (Infantry Transport)"
-				class O_T_VTOL_02_vehicle_F					{cost = 750;	requirements[]={"H"};	};	// "Y-32 Xi'an (vehicle Transport)"
-				class B_T_VTOL_01_vehicle_F					{cost = 150;	requirements[]={"H"};	};	// "V-44 X Blackfish(Vic)";
-				class O_Plane_CAS_02_dynamicLoadout_F		{cost = 650;	requirements[]={"A"};	};	// "To-199 Neophron (CAS)"
-				class O_Plane_Fighter_02_F					{cost = 750;	requirements[]={"A"};	};	// "To-201 Shikra"
-				class O_Plane_Fighter_02_Stealth_F			{cost = 750;	requirements[]={"A"};	};	// "To-201 Shikra Stealth"
-				class B_Plane_Fighter_01_F					{cost = 750;	requirements[]={"A"};	};	// "F/A-181 Black Wasp II";
-				class I_Plane_Fighter_04_F					{cost = 750;	requirements[]={"A"};	};	// "A-149 Gryphon";
-				class I_C_Plane_Civil_01_F					{cost = 150;	requirements[]={"A"};	};	// "Caesar BTT";
-				class B_T_UAV_03_F							{cost = 1000;	requirements[]={"H"}; offset[]={0, 6, 0};};	// "Firescout";
-				class O_UAV_02_F							{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0}; };	// "K40 AT"
-				class O_UAV_02_CAS_F						{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0}; };	// "K40 LGB"
-				class O_T_UAV_04_CAS_F						{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0}; };	// "KH-3A CAS"
-				class B_UAV_05_F							{cost = 1000;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "UCAV";
+				class O_Heli_Light_02_unarmed_F				{cost = 75;	requirements[]={"H"};	};	// "PO-30 Orca (Unarmed)"
+				class O_Heli_Light_02_dynamicLoadout_F		{cost = 100;	requirements[]={"H"};	};	// "PO-30 Orca"
+				class O_Heli_Transport_04_F					{cost = 75;	requirements[]={"H"};	};	// "Mi-290 Taru"
+				class O_Heli_Transport_04_covered_F			{cost = 75;	requirements[]={"H"};	};	// "Mi-290 Taru (Transport)"
+				class O_Heli_Transport_04_medevac_F			{cost = 75;	requirements[]={"H"};	};	// "Mi-290 Taru (Medical)"
+				class O_Heli_Attack_02_dynamicLoadout_F		{cost = 125;	requirements[]={"H"};	};	// "Mi-48 Kajman"
+				class O_T_VTOL_02_infantry_dynamicLoadout_F	{cost = 350;	requirements[]={"H"};	};	// "Y-32 Xi'an (Infantry Transport)"
+				class O_T_VTOL_02_vehicle_F					{cost = 350;	requirements[]={"H"};	};	// "Y-32 Xi'an (vehicle Transport)"
+				class B_T_VTOL_01_vehicle_F					{cost = 75;	requirements[]={"H"};	};	// "V-44 X Blackfish(Vic)";
+				class O_Plane_CAS_02_dynamicLoadout_F		{cost = 350;	requirements[]={"A"};	};	// "To-199 Neophron (CAS)"
+				class O_Plane_Fighter_02_F					{cost = 350;	requirements[]={"A"};	};	// "To-201 Shikra"
+				class O_Plane_Fighter_02_Stealth_F			{cost = 350;	requirements[]={"A"};	};	// "To-201 Shikra Stealth"
+				class B_Plane_Fighter_01_F					{cost = 350;	requirements[]={"A"};	};	// "F/A-181 Black Wasp II";
+				class I_Plane_Fighter_04_F					{cost = 350;	requirements[]={"A"};	};	// "A-149 Gryphon";
+				class I_C_Plane_Civil_01_F					{cost = 75;	requirements[]={"A"};	};	// "Caesar BTT";
+				class B_T_UAV_03_F							{cost = 500;	requirements[]={"H"}; offset[]={0, 6, 0};};	// "Firescout";
+				class O_UAV_02_F							{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0}; };	// "K40 AT"
+				class O_UAV_02_CAS_F						{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0}; };	// "K40 LGB"
+				class O_T_UAV_04_CAS_F						{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0}; };	// "KH-3A CAS"
+				class B_UAV_05_F							{cost = 500;	requirements[]={"A"}; offset[]={0, 6, 0};};	// "UCAV";
 				
 				
 			};
